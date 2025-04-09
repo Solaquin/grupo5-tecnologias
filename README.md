@@ -5,15 +5,15 @@ Sitio web de Bicur Marroquinería, una marca especializada en productos de cuero
 ---
 
 # Estructura del Proyecto
-bicur-web/ 
-├── home.html # Página principal del sitio 
-├── frame4.html # Página de categoría Mujer 
+bicur-web/  
+├── home.html # Página principal del sitio  
+├── frame4.html # Página de categoría Mujer  
 └──  checkout.html # Formulario de compra con resumen de pedido  
-styles/ 
-└── estilos_unificados.css # Estilos personalizados del sitio 
-sources/ # Carpeta con todos los recursos visuales (imágenes) 
-scripts/ 
-└── script.js # Script principal
+styles/  
+└── estilos_unificados.css # Estilos personalizados del sitio  
+sources/ # Carpeta con todos los recursos visuales (imágenes)  
+scripts/  
+└── script.js # Script principal  
 
 #  `home.html` - Página Principal
 
@@ -120,11 +120,3 @@ Al cargar la página (`window.onload` y `DOMContentLoaded`), el script activa lo
 - **Bootstrap Icons 1.10.5**
 - **Font Awesome 6.5.0**
 
-
-
-#  Contacto
-
-**Bicur Marroquinería**  
- Bogotá, Colombia  
- marroquineriabicur@gmail.com  
- Instagram |  WhatsApp |  TikTok |  Facebook  
