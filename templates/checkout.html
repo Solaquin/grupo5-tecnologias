@@ -13,16 +13,21 @@
     <link rel="stylesheet" href="../styles/estilos_unificados.css">
 </head>
 <body>
-    <!-- HEADER RESPONSIVE (igual al original) -->
+    <div class="top-bar">
+        100% Cuero Colombiano
+    </div>
+
+      <!-- HEADER RESPONSIVE -->
     <nav class="navbar navbar-expand-lg bg-burgundy navbar-dark py-3">
         <div class="container">
+    
             <!-- LOGO -->
             <a class="navbar-brand d-flex align-items-center gap-2" href="home.html">
-                <img src="../sources/bicur_white.png" alt="Logo Bicur" height="100" >
+                <img src="../sources/bicur_white.png" alt="Logo Bicur" height="100">
             </a>
     
             <!-- Botón hamburguesa -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-label="Abrir menú de navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
     
@@ -41,8 +46,9 @@
                 <a href="#" class="text-white fs-5"><i class="bi bi-search"></i></a>
                 <a href="#" class="text-white fs-5"><i class="bi bi-cart"></i></a>
             </div>
+    
         </div>
-    </nav>
+      </nav>
 
     <!-- Contenido de la página de checkout -->
     <div class="container checkout-container my-5">
@@ -139,16 +145,18 @@
         </div>
     </div>
 
-     <!-- Footer -->
+<!-- Footer -->
   <footer>
     <div class="contacto">
       <p><strong>Contáctanos</strong></p>
       <p>Mail: marroquineriabicur@gmail.com</p>
       <p>Dirección: Carrera 82 N° 77-04</p>
-      <p><strong>Suscríbete</strong></p>
-      <form>
-        <input type="email" placeholder="Escribe tu correo">
-        <button type="submit">Suscribirse</button>
+      <form class="form-suscripcion">
+        <label for="email" class="form-label">Suscríbete</label>
+        <div class="d-flex gap-2">
+          <input type="email" class="form-control" id="email" placeholder="Tu correo" required>
+          <button type="submit" class="btn btn-burgundy">Suscribirse</button>
+        </div>
       </form>
     </div>
     <div class="redes">
