@@ -81,7 +81,7 @@ function suscribirFooter(event) {
   
         localStorage.setItem("carrito", JSON.stringify(carrito));
   
-        alert(`✅ ${nombre} fue agregado a tu bolsa.`);
+        alert(`✅ ${nombre} fue agregado a tu carrito.`);
       });
     }
   });
