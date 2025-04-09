@@ -46,6 +46,7 @@ scripts/
   - Teléfono
 
   ### Dirección de Envío
+  - Dirección
   - Ciudad
   - Departamento o Estado
   - Código Postal
@@ -80,7 +81,7 @@ Esta carpeta contiene **todas las imágenes utilizadas en el sitio web**, organi
 
 Archivo de estilos unificados que contiene:
 
-- Colores corporativos (`vinotinto`, blanco)
+- Colores corporativos (`vinotinto`, `blanco`)
 - Botones personalizados (`btn-burgundy`, `btn-outline-burgundy`)
 - Estilos del hero, categorías, destacados y footer
 - Reglas responsive y clases adicionales para estética unificada
