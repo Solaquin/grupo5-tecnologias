@@ -16,18 +16,30 @@ function suscribirFooter(event) {
   
   // 3. Función para el ícono de carrito
   function abrirCarrito() {
-    alert("Tu carrito está vacío por ahora :(");
+    if(localStorage.getItem("carrito").length = 0)
+      alert("Tu carrito está vacío por ahora :(");
+    else 
+    {
+      const carrito = JSON.parse(localStorage.getItem("carrito"));
+      let mensaje = "Tu carrito contiene:\n";
+      carrito.forEach(item => {
+        mensaje += `${item.nombre} - $${item.precio} x ${item.cantidad}\n`;
+      });
+      alert(mensaje);
+    }
   }
   
   // 4. Simulación de envío del formulario de compra
-  function enviarFormularioCompra(event) {
+  function enviarFormularioCompra(event) 
+  {
     event.preventDefault();
     alert("Tu pedido ha sido enviado con éxito. ¡Gracias por tu compra!");
     return false;
   }
   
   // 5. Inicializador (agrega listeners cuando la página se carga)
-  window.onload = function () {
+  window.onload = function () 
+  {
     // Ícono de lupa
     const lupa = document.querySelector('.bi-search');
     if (lupa) lupa.addEventListener('click', activarBusqueda);
@@ -44,4 +56,33 @@ function suscribirFooter(event) {
     const formFooter = document.querySelector('.form-suscripcion');
     if (formFooter) formFooter.addEventListener('submit', suscribirFooter);
   }
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const botonAgregar = document.querySelector(".add-to-cart");
+  
+    if (botonAgregar) 
+        {
+      botonAgregar.addEventListener("click", () => {
+        const id = botonAgregar.dataset.id;
+        const nombre = botonAgregar.dataset.nombre;
+        const precio = parseInt(botonAgregar.dataset.precio);
+  
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  
+        const productoExistente = carrito.find(item => item.id === id);
+  
+        if (productoExistente) 
+        {
+          productoExistente.cantidad += 1;
+        } 
+        else {
+          carrito.push({ id, nombre, precio, cantidad: 1 });
+        }
+  
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+  
+        alert(`✅ ${nombre} fue agregado a tu bolsa.`);
+      });
+    }
+  });
   
