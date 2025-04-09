@@ -1,11 +1,19 @@
-# bicur-marroquineria
+# Bicur Marroquineria - Grupo 05
 
 Sitio web de Bicur Marroquinería, una marca especializada en productos de cuero 100% colombiano. Este sitio está diseñado para mostrar productos destacados, categorías por género y un flujo de compra simple e intuitivo.
 
 ---
 
 # Estructura del Proyecto
-bicur-web/ ├── home.html # Página principal del sitio ├── frame4.html # Página de categoría Mujer ├── checkout.html # Formulario de compra con resumen de pedido │ ├── styles/ │ └── estilos_unificados.css # Estilos personalizados del sitio │ ├── sources/ # Carpeta con todos los recursos visuales (imágenes) │ ├── bicur_white.png # Logo Bicur en blanco para navbar │ ├── mujer.jpg # Fondo de la sección Mujer │ ├── tarjetero.jpg # Fondo de la sección Hombre │ ├── tarjeterodoble.jpg # Imagen del producto Tarjetero Magno │ ├── tarjeterosencillo.jpg # Imagen del producto Tarjetero Bravus │ ├── damagrande.jpg # Imagen de la billetera Zafiro │ ├── damamariposas.jpg # Imagen de la billetera Aurora │ └── industria.png # Sello de Industria y Comercio (footer) │ └── js/ └── app.js # Script principal (puede estar vacío o personalizado)
+bicur-web/ 
+├── home.html # Página principal del sitio 
+├── frame4.html # Página de categoría Mujer 
+└──  checkout.html # Formulario de compra con resumen de pedido  
+styles/ 
+└── estilos_unificados.css # Estilos personalizados del sitio 
+sources/ # Carpeta con todos los recursos visuales (imágenes) 
+scripts/ 
+└── script.js # Script principal
 
 #  `home.html` - Página Principal
 
@@ -76,6 +84,33 @@ Archivo de estilos unificados que contiene:
 - Botones personalizados (`btn-burgundy`, `btn-outline-burgundy`)
 - Estilos del hero, categorías, destacados y footer
 - Reglas responsive y clases adicionales para estética unificada
+
+---
+
+#  `script.js` – Funcionalidad del sitio
+
+Este archivo contiene todas las funciones de JavaScript necesarias para la interacción básica del usuario con el sitio web. Las principales funciones que maneja son:
+
+### 1. Suscripción al newsletter
+Captura el correo ingresado en el formulario del footer y muestra una alerta confirmando el registro.
+
+### 2. Ícono de búsqueda
+Muestra un cuadro de diálogo (`prompt`) que simula una búsqueda. Actualmente es una función *placeholder* para una futura implementación de búsqueda real.
+
+### 3. Ícono del carrito
+- Si el carrito está vacío, muestra una alerta.
+- Si contiene productos, muestra un resumen con nombre, cantidad y precio de cada uno, recuperado desde `localStorage`.
+
+### 4. Envío de formulario de compra
+Simula la finalización de una compra mostrando una alerta de confirmación al enviar el formulario.
+
+### 5. Agregar producto al carrito
+- Los botones de "Agregar a Bolsa" almacenan productos en `localStorage`.
+- Si el producto ya existe, incrementa su cantidad.
+- Usa atributos `data-*` para capturar `id`, `nombre` y `precio`.
+
+### 6. Inicialización automática
+Al cargar la página (`window.onload` y `DOMContentLoaded`), el script activa los *event listeners* necesarios para que todas estas funciones funcionen correctamente sin intervención adicional.
 
 ---
 
