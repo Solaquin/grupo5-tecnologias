@@ -21,7 +21,7 @@
   <div class="cat mujer">
     <div class="overlay">
       <img src="../sources/mujer.jpg" alt="Categoría Mujer">
-      <a href="frame4.html" class="btn btn-outline-burgundy btn-borde-blanco">Ver Mujer</a>
+      <a href="frame4.php" class="btn btn-outline-burgundy btn-borde-blanco">Ver Mujer</a>
     </div>
   </div>
 

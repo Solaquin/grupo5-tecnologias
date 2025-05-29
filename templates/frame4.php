@@ -27,7 +27,7 @@
                     data-id="501" 
                     data-nombre="Billetera de mujer cuero Otoñal" 
                     data-precio="99000">Agregar a Carrito</button>
-                    <a href="checkout.html" class="btn btn-outline-burgundy btn-lg py-3">Comprar ahora</a>
+                    <a href="checkout.php" class="btn btn-outline-burgundy btn-lg py-3">Comprar ahora</a>
                 </div>
                 
                 <!-- Product Description -->
