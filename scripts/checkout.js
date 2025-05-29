@@ -52,3 +52,12 @@ if (carrito.length === 0) {
   `;
 }
 
+window.onload = function () 
+{  
+  // Formulario de compra
+  document.getElementById('formulario-compra').addEventListener('submit', function () {
+    localStorage.clear();
+  });
+}  
+
+

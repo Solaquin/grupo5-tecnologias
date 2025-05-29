@@ -26,7 +26,7 @@ if (!$id) {
                 <!-- Action Buttons -->
                 <div class="d-grid gap-3 mb-4">
                     <button class="btn btn-burgundy btn-lg py-3 add-to-cart">Agregar a Carrito</button>
-                    <a href="checkout.php" class="btn btn-outline-burgundy btn-lg py-3">Comprar ahora</a>
+                    <a class="btn btn-outline-burgundy btn-lg py-3 buy-now" href="carrito.php" >Comprar ahora</a>
                 </div>
             </div>
                 <!-- Product Description -->
