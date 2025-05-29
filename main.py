@@ -23,81 +23,87 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
-class Tarjeta(db.Model):
-    __tablename__ = 'tarjeta'
+class Producto(db.Model):
+    __tablename__ = 'productos'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255), nullable=False)
     description = db.Column(db.String(255), nullable=False)
     img = db.Column(db.String(255), nullable=False)
+    price = db.Column(db.Float, nullable=False)
 
-    def __init__(self, name, description, img):
+    def __init__(self, name, description, img, price):
         self.name = name
         self.description = description
         self.img = img
+        self.price = price
 
-class TarjetaSchema(ma.SQLAlchemyAutoSchema):
+class ProductoSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
-        model = Tarjeta
+        model = Producto
         load_instance = True
 
-tarjeta_schema = TarjetaSchema()
-tarjetas_schema = TarjetaSchema(many=True)
+producto_schema = ProductoSchema()
+productos_schema = ProductoSchema(many=True)
 
 @app.route('/', methods=['GET'])
 def index():
     return jsonify({'message': 'Welcome to the Flask API!'})
 
-@app.route('/tarjetas', methods=['GET'])
+@app.route('/producto', methods=['GET'])
 def get_categoria():
-    all_categorias = Tarjeta.query.all()
-    result = tarjetas_schema.dump(all_categorias)
+    all_categorias = Producto.query.all()
+    result = productos_schema.dump(all_categorias)
     return jsonify(result)
 
-@app.route('/tarjetas/<id>', methods=['GET'])
+@app.route('/producto/<id>', methods=['GET'])
 def get_categoriaID(id):
-    categoria = Tarjeta.query.get(id)
-    return tarjeta_schema.jsonify(categoria)
+    categoria = Producto.query.get(id)
+    return producto_schema.jsonify(categoria)
 
-@app.route('/tarjetas', methods=['POST'])
+@app.route('/producto', methods=['POST'])
 def add_categoria():
     data = request.get_json(force=True)
+
     name = data['name']
     description = data['description']
     img = data['img']
+    price = data['price']
 
-    new_categoria = Tarjeta(name, description, img)
+    new_categoria = Producto(name, description, img, price)
 
     db.session.add(new_categoria)
     db.session.commit()
 
-    return tarjeta_schema.jsonify(new_categoria)
+    return producto_schema.jsonify(new_categoria)
 
-@app.route('/tarjetas/<id>', methods=['PUT'])
+@app.route('/producto/<id>', methods=['PUT'])
 def update_categoria(id):
     data = request.get_json(force=True)
 
-    categoria = Tarjeta.query.get(id)
+    categoria = Producto.query.get(id)
 
     name = data['name']
     description = data['description']
     img = data['img']
+    price = data['price']
 
     categoria.name = name
     categoria.description = description
     categoria.img = img
+    categoria.price = price
     
     db.session.commit()
 
-    return tarjeta_schema.jsonify(categoria)
+    return producto_schema.jsonify(categoria)
 
-@app.route('/tarjetas/<id>', methods=['DELETE'])
+@app.route('/producto/<id>', methods=['DELETE'])
 def delete_categoria(id):
-    categoria = Tarjeta.query.get(id)
+    categoria = Producto.query.get(id)
 
     db.session.delete(categoria)
     db.session.commit()
 
-    return tarjeta_schema.jsonify(categoria)
+    return producto_schema.jsonify(categoria)
 
 
 if __name__ == '__main__':
