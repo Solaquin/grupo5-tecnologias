@@ -37,7 +37,7 @@ class Producto(db.Model):
         self.description = description
         self.img = img
         self.price = price
-        category_id = category_id
+        self.category_id = category_id
 
 class ProductoSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
