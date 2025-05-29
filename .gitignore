@@ -18,3 +18,5 @@ __pycache__/
 # Dependencias
 pip-wheel-metadata/
 *.egg-info/
+
+php/admin/createUser.php
