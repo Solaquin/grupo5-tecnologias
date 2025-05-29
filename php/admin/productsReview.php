@@ -1,4 +1,6 @@
 <?php
+
+    session_start();
     include 'conexionBD.php';
     $connection = $myPDO->prepare("SELECT * FROM productos");
     $connection->execute();
@@ -19,24 +21,49 @@
 </head>
 
 <body>
+
+    <?php if (isset($_SESSION['email'])): ?>
+        
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <img src="../../sources/bicur_letra_negra.png" alt="Bicur Marroquinería" style="width: 100px;">
+            </a>
+
+            <div class="d-flex align-items-center">
+                <span class="me-3 text-dark fw-bold">
+                <?php echo htmlspecialchars($_SESSION['name']); ?>
+                </span>
+
+                <a href="logout.php" class="btn btn-outline-danger">Cerrar sesión</a>
+            </div>
+        </div>
+    </nav>
+    <?php endif; ?>
+
 <section class="admin-productos" style="padding: 40px;">
   <h2 style="color: #6F2020; text-align: center;">Gestión de Productos</h2>
 
-  <div style="text-align: right; margin-bottom: 20px;">
-    <a href="crearProducto.php" class="btn btn-burgundy">Agregar Nuevo Producto</a>
-  </div>    
+    <?php if (isset($_SESSION['email'])): ?>
+        <div style="text-align: right; margin-bottom: 20px;">
+        <a href="crearProducto.php" class="btn btn-burgundy">Agregar Nuevo Producto</a>
+        </div>   
+    <?php endif; ?>
+ 
 
   <div class="tabla-container" style="overflow-x:auto;">
     <table style="width: 100%; border-collapse: collapse; background-color: white;">
       <thead style="background-color: #6F2020; color: white;">
         <tr>
-          <th style="padding: 10px;">ID</th>
-          <th style="padding: 10px;">Nombre</th>
-          <th style="padding: 10px;">Precio</th>
-          <th style="padding: 10px;">Categoría</th>
-          <th style="padding: 10px;">Descripción</th>
-          <th style="padding: 10px;">Imagen</th>
-          <th style="padding: 10px;">Acciones</th>
+          <th style="padding: 10px; text-align: center;">ID</th>
+          <th style="padding: 10px; text-align: center;">Nombre</th>
+          <th style="padding: 10px; text-align: center;">Precio</th>
+          <th style="padding: 10px; text-align: center;">Categoría</th>
+          <th style="padding: 10px; text-align: center;">Descripción</th>
+          <th style="padding: 10px; text-align: center;">Imagen</th>
+        <?php if (isset($_SESSION['email'])): ?>
+          <th style="padding: 10px; text-align: center;">Acciones</th>
+        <?php endif; ?>
         </tr>
       </thead>
       <tbody>
@@ -49,10 +76,12 @@
                 <td style="padding: 10px;"><?= $valor['category_id']?></td>
                 <td style="padding: 10px;"><?= $valor['description']?></td>
                 <td style="padding: 10px;"><?= $valor['img']?></td>
-                <td style="padding: 10px;">
+                <?php if (isset($_SESSION['email'])): ?>
+                    <td style="padding: 10px;">
                     <a href="editarProducto.php?id=<?= $valor['id']; ?>" class="btn btn-outline-burgundy" style="margin-right: 10px;">Editar</a>
                     <a href="eliminarProducto.php?id=<?= $valor['id']; ?>" class="btn btn-outline-burgundy" onclick="return confirm('¿Estás seguro que deseas eliminar este producto?');">Eliminar</a>
-                </td>
+                    </td>
+                <?php endif; ?>
             </tr>
         <?php endforeach; ?>
 
