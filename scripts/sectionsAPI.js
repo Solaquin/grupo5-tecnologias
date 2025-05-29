@@ -12,13 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const filtrados = data.filter(producto => producto.category_id == categoria);
 
       filtrados.forEach(producto => {
-        const card = document.createElement("div");
+        const card = document.createElement("a");
+        card.href = `product.php?id=${producto.id}`;
         card.classList.add("card-producto");
 
         card.innerHTML = `
-          <img src="${producto.img}" alt="${producto.name}" class="card-img">
-          <p class="card-nombre">${producto.name}</p>
-          <span class="card-precio">$${producto.price}</span>
+        <img src="${producto.img}" alt="${producto.name}" class="card-img">
+        <p class="card-nombre">${producto.name}</p>
+        <span class="card-precio">$${producto.price}</span>
         `;
 
         grid.appendChild(card);

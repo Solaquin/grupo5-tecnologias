@@ -20,10 +20,10 @@
     <div class="redes">
       <p><strong>Redes Sociales</strong></p>
       <div class="icons">
-        <a href="https://www.instagram.com/bicur_marroquinera/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://w.app/hmf1qy" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.tiktok.com/@bicur.marroquineria" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.facebook.com/share/1C8SkZz1hL/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/bicur_marroquinera/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://w.app/hmf1qy" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@bicur.marroquineria" target="_blank" aria-label="Tik Tok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/share/1C8SkZz1hL/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
       </div>
     </div>
     <div class="legal">

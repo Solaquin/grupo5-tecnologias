@@ -47,14 +47,14 @@ window.onload = function ()
 }
   
 document.addEventListener("DOMContentLoaded", () => {
-    const botonAgregar = document.querySelector(".add-to-cart");
+    const addToCartBtn = document.querySelector(".add-to-cart");
   
-    if (botonAgregar) 
+    if (addToCartBtn) 
         {
-      botonAgregar.addEventListener("click", () => {
-        const id = botonAgregar.dataset.id;
-        const nombre = botonAgregar.dataset.nombre;
-        const precio = parseInt(botonAgregar.dataset.precio);
+      addToCartBtn.addEventListener("click", () => {
+        const id = addToCartBtn.dataset.id;
+        const nombre = addToCartBtn.dataset.nombre;
+        const precio = parseInt(addToCartBtn.dataset.precio);
   
         let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   

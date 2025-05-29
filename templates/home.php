@@ -29,7 +29,7 @@
   <div class="cat hombre">
     <div class="overlay">
       <img src="../sources/tarjetero.jpg" alt="Categoría Hombre">
-      <a href="secciones.php?categoria=1" class="btn btn-outline-burgundy btn-borde-blanco">Ver Hombre</a>
+      <a href="secciones.php?categoria=2" class="btn btn-outline-burgundy btn-borde-blanco">Ver Hombre</a>
     </div>
   </div>
 </section>

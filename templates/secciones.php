@@ -13,6 +13,6 @@
   </div>
 </section>
 
-<script src="../scripts/productosApi.js"></script>
+<script src="../scripts/sectionsAPI.js"></script>
 
 <?php include('../php/includes/footer.php'); ?>
