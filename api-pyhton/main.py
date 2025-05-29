@@ -51,7 +51,7 @@ productos_schema = ProductoSchema(many=True)
 def index():
     return jsonify({'message': 'Welcome to the Flask API!'})
 
-@app.route('/producto', methods=['GET'])
+@app.route('/productos', methods=['GET'])
 def get_producto():
     all_productos = Producto.query.all()
     result = productos_schema.dump(all_productos)

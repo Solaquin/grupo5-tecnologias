@@ -21,7 +21,7 @@
   <div class="cat mujer">
     <div class="overlay">
       <img src="../sources/mujer.jpg" alt="Categoría Mujer">
-      <a href="frame4.php" class="btn btn-outline-burgundy btn-borde-blanco">Ver Mujer</a>
+      <a href="secciones.php?categoria=1" class="btn btn-outline-burgundy btn-borde-blanco">Ver Mujer</a>
     </div>
   </div>
 
@@ -29,7 +29,7 @@
   <div class="cat hombre">
     <div class="overlay">
       <img src="../sources/tarjetero.jpg" alt="Categoría Hombre">
-      <a href="#" class="btn btn-outline-burgundy btn-borde-blanco">Ver Hombre</a>
+      <a href="secciones.php?categoria=1" class="btn btn-outline-burgundy btn-borde-blanco">Ver Hombre</a>
     </div>
   </div>
 </section>

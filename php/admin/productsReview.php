@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-            <img src="../../sources/bicur_letra_negra.png" alt="Bicur Marroquinería" style="width: 100px;">
+            <img src="../../sources/bicur letra negra.png" alt="Bicur Marroquinería" style="width: 100px;">
             </a>
 
             <?php if (isset($_SESSION['email'])): ?>
