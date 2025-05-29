@@ -58,7 +58,7 @@
 
 <section class="d-flex flex-column justify-content-up align-items-center vh-100" style="background-color: #f5f5f5;">
   <!-- Logo encima de la tarjeta -->
-  <img src="../../sources/bicur_letra_negra.png" alt="logo Bicur Marroquinería" class="mb-4" style="width: 200px;">
+  <img src="../../sources/bicur letra negra.png" alt="logo Bicur Marroquinería" class="mb-4" style="width: 200px;">
 
   <div class="card shadow p-4" style="width: 100%; max-width: 400px; border-radius: 1rem;">
     <h3 class="text-center mb-4" style="color: #6F2020;">Iniciar Sesión</h3>
