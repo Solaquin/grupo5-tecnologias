@@ -42,38 +42,10 @@ window.onload = function ()
   if (carrito) carrito.addEventListener('click', abrirCarrito);  
 
   // Formulario de compra
-  const formCompra = document.querySelector('form[action="#"]');
-  if (formCompra) formCompra.addEventListener('submit', enviarFormularioCompra);
-}
-  
-document.addEventListener("DOMContentLoaded", () => {
-    const addToCartBtn = document.querySelector(".add-to-cart");
-  
-    if (addToCartBtn) 
-        {
-      addToCartBtn.addEventListener("click", () => {
-        const id = addToCartBtn.dataset.id;
-        const nombre = addToCartBtn.dataset.nombre;
-        const precio = parseInt(addToCartBtn.dataset.precio);
-  
-        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-  
-        const productoExistente = carrito.find(item => item.id === id);
-  
-        if (productoExistente) 
-        {
-          productoExistente.cantidad += 1;
-        } 
-        else {
-          carrito.push({ id, nombre, precio, cantidad: 1 });
-        }
-  
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-  
-        alert(`✅ ${nombre} fue agregado a tu carrito.`);
-      });
-    }
-});  
+  document.getElementById('formulario-compra').addEventListener('submit', function () {
+    localStorage.clear();
+  });
+}  
 
 // 6. Suscripción al newsletter del footer
 document.addEventListener("DOMContentLoaded", () => {

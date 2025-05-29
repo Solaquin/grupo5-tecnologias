@@ -421,3 +421,14 @@ footer p
   max-width: 300px;
 }
 
+.product-totals {
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.product-totals {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  background-color: #fff;
+}

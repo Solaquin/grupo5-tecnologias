@@ -37,7 +37,6 @@
             <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-4 text-center">
                 <li class="nav-item"><a class="nav-link text-white" href="../templates/secciones.php?categoria=1">MUJER</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="../templates/secciones.php?categoria=2">HOMBRE</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">CUIDADO DEL CUERO</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="../templates/secciones.php?categoria=3">OUTLET</a></li>
             </ul>
         </div>
