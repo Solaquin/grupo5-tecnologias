@@ -3,6 +3,7 @@
       <h1 class="visually-hidden">Checkout - Bicur Marroquinería</h1>
 
     <!-- Contenido de la página de checkout -->
+    <div id="mensaje-alerta"></div>
     <div class="container checkout-container my-5">
         <div class="row">
             <div class="col-lg-8">

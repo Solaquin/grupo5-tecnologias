@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
         localStorage.setItem("carrito", JSON.stringify(carrito));
   
-        alert(`✅ ${nombre} fue agregado a tu carrito.`);
+        mostrarMensaje(`${nombre} fue agregado a tu carrito.`);
       });
     }
 });
@@ -104,7 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
   
         localStorage.setItem("carrito", JSON.stringify(carrito));
   
-        alert(`✅ ${nombre} fue agregado a tu carrito.`);
+        mostrarMensaje(`${nombre} fue agregado a tu carrito.`);
       });
     }
 });
+
+

@@ -38,15 +38,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':departamento'  => $departamento,
             ':codigo_postal' => $codigoPostal,
         ]);
-
-        echo "<script>
-            alert('Pedido realizado con éxito');
-            window.location.href = '../../templates/home.php';
-        </script>";
+        http_response_code(200);
+        echo 'Pedido realizado con éxito! Gracias por tu compra.';
 
     } catch (PDOException $e) {
         http_response_code(500);
-         echo "<script>alert('Error en la base de datos: " . $e->getMessage() . "'); history.back();</script>";
+         echo "Error en la base de datos: " . $e->getMessage() . "; history.back();";
     }
 }
 ?>

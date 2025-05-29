@@ -33,4 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+function mostrarMensaje(nombre) {
+  const contenedor = document.getElementById('mensaje-alerta');
+  contenedor.innerHTML = `
+    <div class="alert alert-success text-center alert-dismissible fade show" role="alert">
+      ✅ <strong>${nombre}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+  `;
+}
+
   

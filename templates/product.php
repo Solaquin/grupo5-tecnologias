@@ -9,6 +9,7 @@ if (!$id) {
 
 <?php include('../php/includes/header.php'); ?>
 
+<div id="mensaje-alerta"></div>
       <!-- Product Section -->
       <div class="container my-5">
         <div class="row">
