@@ -1,10 +1,3 @@
-// 1. Suscripción al newsletter del footer
-function mostrarAlerta() {
-    setTimeout(() => {
-      alert("¡Gracias por suscribirte!");
-    }, 100); // Se muestra luego de enviar el formulario
-    return true; // Deja que el formulario se envíe
-}
   
 // 2. Función para el ícono de búsqueda (lupa)
 function activarBusqueda() {
@@ -82,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });  
 
+// 6. Suscripción al newsletter del footer
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("form-suscripcion");
   const popup = document.getElementById("popup-container");
