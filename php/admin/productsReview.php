@@ -21,26 +21,25 @@
 </head>
 
 <body>
-
-    <?php if (isset($_SESSION['email'])): ?>
-        
+    <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
             <img src="../../sources/bicur_letra_negra.png" alt="Bicur Marroquinería" style="width: 100px;">
             </a>
 
+            <?php if (isset($_SESSION['email'])): ?>
             <div class="d-flex align-items-center">
                 <span class="me-3 text-dark fw-bold">
                 <?php echo htmlspecialchars($_SESSION['name']); ?>
                 </span>
-
+                
                 <a href="logout.php" class="btn btn-outline-danger">Cerrar sesión</a>
             </div>
+            <?php endif ?>
         </div>
     </nav>
-    <?php endif; ?>
-
+    
 <section class="admin-productos" style="padding: 40px;">
   <h2 style="color: #6F2020; text-align: center;">Gestión de Productos</h2>
 
