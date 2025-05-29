@@ -1,4 +1,4 @@
-<?php include('php/includes/header.php'); ?>
+<?php include('../php/includes/header.php'); ?>
 
   <!-- Hero -->
   <section class="hero">
@@ -64,4 +64,4 @@
     <p class="slogan">Bicur: cuero artesanal con historia y esencia.</p>
   </section>
 
-<?php include('php/includes/footer.php'); ?>
+<?php include('../php/includes/footer.php'); ?>
