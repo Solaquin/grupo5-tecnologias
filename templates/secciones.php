@@ -4,8 +4,8 @@
   <div class="container">
     <!-- Título e introducción -->
     <div class="text-center mb-5">
-      <h2 class="text-burgundy">Explorá nuestra colección de billeteras</h2>
-      <p>Cada pieza es única, hecha a mano con cuero legítimo y mucho amor por el oficio.</p>
+      <h2 class="text-burgundy section-subtitle"></h2>
+      <p class="section-description"></p>
     </div>
 
     <!-- Contenedor dinámico -->
@@ -13,6 +13,6 @@
   </div>
 </section>
 
-<script src="../scripts/sectionsAPI.js"></script>
+<script src="../scripts/sections.js"></script>
 
 <?php include('../php/includes/footer.php'); ?>

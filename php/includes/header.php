@@ -43,7 +43,6 @@
 
         <!-- Íconos -->
         <div class="d-flex gap-3">
-          <a href="#" class="text-white fs-5" aria-label="Buscar icon"><i class="bi bi-search"></i></a>
           <a href="carrito.php" class="text-white fs-5" aria-label="Carrito icon"><i class="bi bi-cart"></i></a>
         </div>
     </div>

@@ -37,6 +37,6 @@ if (!$id) {
         </div>
     </div>
 
-<script src="../scripts/productAPI.js"></script>
+<script src="../scripts/products.js"></script>
 
 <?php include('../php/includes/footer.php'); ?>

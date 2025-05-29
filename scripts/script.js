@@ -1,12 +1,4 @@
   
-// 2. Función para el ícono de búsqueda (lupa)
-function activarBusqueda() {
-  const termino = prompt("¿Qué estás buscando?");
-  if (termino) {
-    alert(`Has buscado: "${termino}". Funcionalidad de búsqueda próximamente.`);    
-  }
-}
-
 // 6. Suscripción al newsletter del footer
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("form-suscripcion");
