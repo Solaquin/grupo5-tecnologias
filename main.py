@@ -30,12 +30,14 @@ class Producto(db.Model):
     description = db.Column(db.String(255), nullable=False)
     img = db.Column(db.String(255), nullable=False)
     price = db.Column(db.Float, nullable=False)
+    category_id = db.Column(db.Integer, nullable=False)
 
-    def __init__(self, name, description, img, price):
+    def __init__(self, name, description, img, price, category_id):
         self.name = name
         self.description = description
         self.img = img
         self.price = price
+        category_id = category_id
 
 class ProductoSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
@@ -50,60 +52,63 @@ def index():
     return jsonify({'message': 'Welcome to the Flask API!'})
 
 @app.route('/producto', methods=['GET'])
-def get_categoria():
-    all_categorias = Producto.query.all()
-    result = productos_schema.dump(all_categorias)
+def get_producto():
+    all_productos = Producto.query.all()
+    result = productos_schema.dump(all_productos)
     return jsonify(result)
 
 @app.route('/producto/<id>', methods=['GET'])
-def get_categoriaID(id):
-    categoria = Producto.query.get(id)
-    return producto_schema.jsonify(categoria)
+def get_productoID(id):
+    producto = Producto.query.get(id)
+    return producto_schema.jsonify(producto)
 
 @app.route('/producto', methods=['POST'])
-def add_categoria():
+def add_producto():
     data = request.get_json(force=True)
 
     name = data['name']
     description = data['description']
     img = data['img']
     price = data['price']
+    category_id = data['category_id']
 
-    new_categoria = Producto(name, description, img, price)
+    new_producto = Producto(name, description, img, price, category_id)
 
-    db.session.add(new_categoria)
+    db.session.add(new_producto)
     db.session.commit()
 
-    return producto_schema.jsonify(new_categoria)
+    return producto_schema.jsonify(new_producto)
 
 @app.route('/producto/<id>', methods=['PUT'])
-def update_categoria(id):
+def update_producto(id):
     data = request.get_json(force=True)
 
-    categoria = Producto.query.get(id)
+    producto = Producto.query.get(id)
 
     name = data['name']
     description = data['description']
     img = data['img']
     price = data['price']
+    category_id = data['category_id']
 
-    categoria.name = name
-    categoria.description = description
-    categoria.img = img
-    categoria.price = price
+    producto.name = name
+    producto.description = description
+    producto.img = img
+    producto.price = price
+    producto.category_id = category_id
     
     db.session.commit()
 
-    return producto_schema.jsonify(categoria)
+    return producto_schema.jsonify(producto)
 
 @app.route('/producto/<id>', methods=['DELETE'])
-def delete_categoria(id):
-    categoria = Producto.query.get(id)
+def delete_producto(id):
+    producto = Producto.query.get(id)
 
-    db.session.delete(categoria)
+    db.session.delete(producto)
     db.session.commit()
 
-    return producto_schema.jsonify(categoria)
+    return producto_schema.jsonify(producto)
 
 
 if __name__ == '__main__':
